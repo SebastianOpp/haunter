@@ -1,0 +1,7 @@
+.kg-gallery-container,
+.kg-gallery-row,
+.kg-gallery-image,
+.kg-width-full img,
+.kg-width-wide img {
+  /* Required to validate ghost theme ¯\_(ツ)_/¯ */
+}
