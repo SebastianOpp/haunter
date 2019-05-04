@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  transition: all .25s ease;
+}
+
+h1, h2, h3 {
+  line-height: 1;
+}
+
+picture, img {
+  display: block;
+  max-width: 100%;
+}
+
+*[class$=-inner] {
+  padding: 0 1em;
+  margin: 0 auto;
+  @media(--md) {
+    max-width: 80%;
+  }
+}
+
+*[class$=-inner_sm] {
+  padding: 0 1em;
+  margin: 0 auto;
+  @media(--md) {
+    max-width: 740px;
+  }
+}
