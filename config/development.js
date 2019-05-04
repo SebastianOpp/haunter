@@ -91,7 +91,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['../content/themes/haunter/assets']),
+    new CleanWebpackPlugin(['haunter'], {
+      root: __dirname + '/' + '../content/themes'
+    }),
     new CopyWebpackPlugin([{
       from: 'src/images',
       to: 'images'

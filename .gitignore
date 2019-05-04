@@ -64,4 +64,8 @@ typings/
 .idea
 
 # generated theme
-haunter/
+content/
+current
+.ghost-cli
+config.development.json
+versions
