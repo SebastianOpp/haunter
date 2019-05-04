@@ -35,6 +35,15 @@ module.exports = {
         }
       },
       {
+        test: /\.hbs$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'theme/',
+          publicPath: '../theme'
+        }
+      },
+      {
         test: /\.css$/,
         exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
@@ -82,12 +91,16 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['theme/assets']),
+    new CleanWebpackPlugin(['../content/themes/haunter/assets']),
     new CopyWebpackPlugin([{
       from: 'src/images',
       to: 'images'
     }]),
     new ExtractTextPlugin('css/screen.css'),
+    new CopyWebpackPlugin([{
+      from: 'src/theme',
+      to: '../'
+    }]),
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 3000,
@@ -99,6 +112,6 @@ module.exports = {
   ],
   output: {
     filename: 'js/bundle.js',
-    path: path.resolve(__dirname, '../theme/assets')
+    path: path.resolve(__dirname, '../content/themes/haunter/assets')
   },
 };
