@@ -1,2 +1,2 @@
 # haunter
-Custom parcelJS based theme for GhostCMS
+Custom parcelJS based theme for GhostCMS & goodies
